@@ -8,6 +8,7 @@ public class ClienteWebService {
 
 		String retorno = Request
 			.Post("http://localhost:8080/gerenciador/empresas") 
+			.addHeader("accept", "application/json")
 			.execute() //executa o post
 			.returnContent()	//aguarda o retorno
 			.asString();	//converte o retorno para string
